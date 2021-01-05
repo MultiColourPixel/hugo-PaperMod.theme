@@ -8,6 +8,9 @@
 <body class="
 {{- if (or (ne .Kind `page` ) (eq .Layout `archives`) (eq .Layout `search`)) -}}
 {{- print "list" -}}
+{{- end }}
+{{- if eq $.Layout `resume` -}}
+{{- print "resume" -}}
 {{- end -}}
 {{- if eq $.Site.Params.defaultTheme `dark` -}}
 {{- print " dark" }}
